@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam
 @RequestMapping("/board")
 class BoardController(private val boardService: BoardService, private val postService: PostService) {
     @GetMapping("")
-    fun index(model: Model): String {
+    fun board(model: Model): String {
         val boards = boardService.getAllBoard()
         model.addAttribute("boards", boards)
 
-        return "board"
+        return "/board/board"
     }
 
     @GetMapping("/post")
@@ -24,6 +24,6 @@ class BoardController(private val boardService: BoardService, private val postSe
         val post = postService.findPostByPostSeq(postSeq)
         model.addAttribute("post", post)
 
-        return "post"
+        return "/board/post"
     }
 }

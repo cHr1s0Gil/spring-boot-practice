@@ -6,7 +6,7 @@ import org.practice.practice.board.entity.BoardEntity
 @Entity
 @Table(
     name = "TEST_POST",
-    uniqueConstraints = [UniqueConstraint(columnNames = ["POSE_SEQ"])]
+    uniqueConstraints = [UniqueConstraint(columnNames = ["POST_SEQ"])]
 )
 class PostEntity (
     @Id
