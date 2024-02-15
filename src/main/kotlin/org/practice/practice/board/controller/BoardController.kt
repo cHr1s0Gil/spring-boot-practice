@@ -1,9 +1,7 @@
-package org.practice.practice.controller
+package org.practice.practice.board.controller
 
-import org.practice.practice.entity.Board
-import org.practice.practice.entity.Post
-import org.practice.practice.service.BoardService
-import org.practice.practice.service.PostService
+import org.practice.practice.board.service.BoardService
+import org.practice.practice.board.post.service.PostService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping

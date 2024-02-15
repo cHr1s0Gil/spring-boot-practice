@@ -1,10 +1,14 @@
-package org.practice.practice.entity
+package org.practice.practice.board.post.entity
 
 import jakarta.persistence.*
+import org.practice.practice.board.entity.BoardEntity
 
 @Entity
-@Table(name = "TEST_POST")
-class Post (
+@Table(
+    name = "TEST_POST",
+    uniqueConstraints = [UniqueConstraint(columnNames = ["POSE_SEQ"])]
+)
+class PostEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "POST_SEQ", nullable = false)
@@ -15,5 +19,5 @@ class Post (
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POST_SEQ", referencedColumnName = "POST_SEQ", insertable = false, nullable = false, updatable = false)
-    var board: Board = Board()
+    var board: BoardEntity = BoardEntity()
 )
