@@ -29,7 +29,6 @@ class UserController (private val userService: UserService){
 
     @PostMapping("/signup")
     fun signupRequest(@ModelAttribute userDTO: UserDTO): String {
-        println("userDTO: ${userDTO.toString()}")
         return userService.signup(userDTO)
     }
 }

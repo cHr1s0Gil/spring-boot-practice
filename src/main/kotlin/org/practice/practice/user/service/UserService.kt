@@ -40,7 +40,6 @@ class UserService(private val userRepository: UserRepository) {
             redirect = "redirect:/login"
         }
 
-        println(message)
         return redirect
     }
 }
