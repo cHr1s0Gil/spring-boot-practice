@@ -9,9 +9,9 @@
 <body>
 <div class="container mt-5">
     <h2>Sign Up</h2>
-    <form th:action="@{/user/signup}" method="post" enctype="multipart/form-data">
+    <form th:action="@{/api/user/signup}" method="post" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="userid" class="form-label">Username</label>
+            <label for="userid" class="form-label">Userid</label>
             <input type="text" class="form-control" id="userid" name="userid" required>
         </div>
         <div class="mb-3">
